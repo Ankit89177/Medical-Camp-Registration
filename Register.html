@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - MedCamp Pro</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="register.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <h1>🏥 Medical Camp Registration</h1>
+      </div>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camps.html">Camp Details</a></li>
+          <li><a href="Register.html" class="active">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Admin button inside mobile menu -->
+        <a href="admin.html" class="admin-btn-mobile">
+          <i class="fas fa-user-shield"></i> Admin
+        </a>
+      </nav>
+
+      <!-- Admin Button on Desktop (Right Corner) -->
+      <a href="admin.html" class="admin-btn-desktop admin-btn">
+        <i class="fas fa-user-shield"></i> Admin
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="page-container">
+    <div class="content-wrapper">
+
+      <!-- Page Header -->
+      <div class="register-header">
+        <div class="badge">REGISTRATION</div>
+        <h2>Register for a Medical Camp</h2>
+        <p>Fill in the details below to register for our free medical camp.</p>
+      </div>
+
+      <div class="register-wrapper">
+        <!-- Registration Form -->
+        <div class="register-form-section">
+          <form id="registration-form" class="register-form">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="name">
+                <i class="fas fa-user"></i> Full Name <span class="required">*</span>
+              </label>
+              <input type="text" id="name" placeholder="Enter your full name" required />
+              <small class="form-hint">Enter your full name as per ID proof</small>
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+              <label for="age">
+                <i class="fas fa-calendar-alt"></i> Age <span class="required">*</span>
+              </label>
+              <input type="number" id="age" min="1" max="120" placeholder="Enter your age" required />
+              <small class="form-hint">Age must be between 1 and 120 years</small>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="form-group">
+              <label for="contact">
+                <i class="fas fa-phone"></i> Contact Number <span class="required">*</span>
+              </label>
+              <input type="tel" id="contact" placeholder="Enter 10-15 digit phone number" required />
+              <small class="form-hint">We'll send confirmation via SMS</small>
+            </div>
+
+            <!-- Select Camp -->
+            <div class="form-group">
+              <label for="camp-select">
+                <i class="fas fa-hospital"></i> Select Camp <span class="required">*</span>
+              </label>
+              <select id="camp-select" required>
+                <option value="">-- Please select a camp --</option>
+              </select>
+              <small class="form-hint">Choose the camp you wish to attend</small>
+            </div>
+
+            
+
+           
+
+          <!-- Terms & Conditions -->
+<div class="form-group checkbox-group">
+  <label class="checkbox-label">
+    <input type="checkbox" id="terms" required />
+    <span class="custom-checkbox"></span>
+    <span class="checkbox-text">
+      I agree to the <a href="#">Terms & Conditions</a> and confirm that all information provided is accurate.
+    </span>
+  </label>
+</div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Register Now
+              <span class="btn-loader" style="display:none;">
+                <i class="fas fa-spinner fa-spin"></i>
+              </span>
+            </button>
+          </form>
+
+          <div id="registration-message"></div>
+        </div>
+
+        <!-- Information Sidebar -->
+        <div class="register-info-sidebar">
+          <div class="info-card">
+            <h4><i class="fas fa-info-circle"></i> What to Expect</h4>
+            <ul>
+              <li><i class="fas fa-check-circle green"></i> 100% Free Medical Checkup</li>
+              <li><i class="fas fa-check-circle green"></i> Consultation with Specialist Doctors</li>
+              <li><i class="fas fa-check-circle green"></i> Free Medicines & Treatment</li>
+              <li><i class="fas fa-check-circle green"></i> Health Awareness Materials</li>
+              <li><i class="fas fa-check-circle green"></i> Digital Health Record</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-clock"></i> Camp Timing</h4>
+            <p><strong>⏰ 9:00 AM - 5:00 PM</strong></p>
+            <p style="font-size: 0.9rem; color: #64748b;">Please arrive 30 minutes early for registration</p>
+          </div>
+
+          <div class="info-card">
+            <h4><i class="fas fa-file-alt"></i> Documents to Bring</h4>
+            <ul>
+              <li><i class="fas fa-id-card"></i> Any Government ID</li>
+              <li><i class="fas fa-prescription"></i> Previous Medical Reports (if any)</li>
+              <li><i class="fas fa-mobile-alt"></i> Mobile Phone for SMS Confirmation</li>
+            </ul>
+          </div>
+
+          <div class="info-card contact-info-card">
+            <h4><i class="fas fa-headset"></i> Need Help?</h4>
+            <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:info@sysslan.com">info@sysslan.com</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>🏥 Medical Camp Registration</h3>
+        <p class="footer-desc">
+          Making healthcare accessible to everyone through free medical camps, 
+          health screenings, and community outreach programs.
+        </p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camps.html">Camp Details</a></li>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="admin.html">Admin Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Upcoming Camps</h4>
+        <ul class="footer-links">
+          <li><a href="Register.html">Eye Checkup Camp</a></li>
+          <li><a href="Register.html">Diabetes Screening</a></li>
+          <li><a href="Register.html">Dental Health Camp</a></li>
+          <li><a href="camps.html">View All →</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span class="contact-icon">📧</span> <a href="mailto:info@sysslan.com">info@sysslan.com</a></li>
+          <li><span class="contact-icon">📞</span> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li><span class="contact-icon">📍</span> 123 Healthcare Blvd, Medical City</li>
+          <li><span class="contact-icon">🕐</span> Mon-Fri: 9:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 <strong>Sysslan IT Solutions</strong> – Internship Project. Conducted with care ❤️</p>
+      <p class="footer-legal">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="main.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

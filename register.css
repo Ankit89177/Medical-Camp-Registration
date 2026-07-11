@@ -1,0 +1,462 @@
+/* ========================================
+   REGISTRATION PAGE SPECIFIC STYLES
+   ======================================== */
+
+/* ----- Page Header ----- */
+.register-header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.register-header .badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.3rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.register-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0b3b5c;
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+.register-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ----- Registration Wrapper ----- */
+.register-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ----- Form Section ----- */
+.register-form-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e8f0f5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group label i {
+  color: #1b6b8f;
+  width: 18px;
+}
+
+.form-group label .required {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1b6b8f;
+  box-shadow: 0 0 0 4px rgba(27, 107, 143, 0.12);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #94a3b8;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+/* ========================================
+   FIXED CHECKBOX STYLES
+   ======================================== */
+.checkbox-group {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-weight: 400 !important;
+  font-size: 0.95rem;
+  color: #1e293b;
+  line-height: 1.6;
+  padding: 0.3rem 0;
+}
+
+/* Hide default checkbox */
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom checkbox */
+.checkbox-label .custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Checked state */
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
+  background: #1b6b8f;
+  border-color: #1b6b8f;
+}
+
+/* Checkmark icon */
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover state */
+.checkbox-label:hover .custom-checkbox {
+  border-color: #1b6b8f;
+}
+
+/* Focus state */
+.checkbox-label input[type="checkbox"]:focus + .custom-checkbox {
+  box-shadow: 0 0 0 3px rgba(27, 107, 143, 0.2);
+}
+
+/* Checkbox text */
+.checkbox-label .checkbox-text {
+  flex: 1;
+  color: #1e293b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.checkbox-label .checkbox-text a {
+  color: #1b6b8f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.checkbox-label .checkbox-text a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Submit Button ----- */
+.btn-submit {
+  background: #1b6b8f;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.btn-submit:hover {
+  background: #0b3b5c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(27, 107, 143, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-submit i {
+  font-size: 1rem;
+}
+
+.btn-submit .btn-loader {
+  display: none;
+}
+
+/* ----- Message Display ----- */
+#registration-message {
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 500;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+#registration-message.success {
+  display: block;
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+#registration-message.error {
+  display: block;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----- Sidebar Info Cards ----- */
+.register-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #e8f0f5;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.info-card h4 {
+  color: #0b3b5c;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-card h4 i {
+  color: #1b6b8f;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card ul li {
+  padding: 0.4rem 0;
+  color: #334155;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-card ul li i {
+  width: 18px;
+}
+
+.info-card ul li i.green {
+  color: #22c55e;
+}
+
+.info-card p {
+  color: #334155;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
+.info-card p a {
+  color: #1b6b8f;
+  text-decoration: none;
+}
+
+.info-card p a:hover {
+  text-decoration: underline;
+}
+
+.contact-info-card p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.contact-info-card p i {
+  color: #1b6b8f;
+  width: 20px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 992px) {
+  .register-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .register-info-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-header h2 {
+    font-size: 2rem;
+  }
+
+  .register-form-section {
+    padding: 1.5rem;
+  }
+
+  .register-info-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.2rem;
+  }
+
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+
+  .checkbox-label .checkbox-text {
+    font-size: 0.9rem;
+  }
+
+  .checkbox-label .custom-checkbox {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .register-header p {
+    font-size: 0.95rem;
+  }
+
+  .register-form-section {
+    padding: 1rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .checkbox-label {
+    font-size: 0.85rem;
+    gap: 0.6rem;
+  }
+
+  .checkbox-label .checkbox-text {
+    font-size: 0.85rem;
+  }
+
+  .checkbox-label .custom-checkbox {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+  }
+}

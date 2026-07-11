@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Medical Camp Registrationo</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- ===== LOGIN CHECK ===== -->
+  <script>
+    if (sessionStorage.getItem('adminLoggedIn') !== 'true') {
+      window.location.href = 'admin-login.html';
+    }
+  </script>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <h1>🏥 Medical Camp Registration</h1>
+      </div>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camps.html">Camp Details</a></li>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="admin-login.html" class="admin-btn-mobile">
+          <i class="fas fa-user-shield"></i> Admin
+        </a>
+      </nav>
+
+      <a href="admin-login.html" class="admin-btn-desktop admin-btn">
+        <i class="fas fa-user-shield"></i> Admin
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="page-container">
+    <div class="content-wrapper">
+
+      <!-- Page Header -->
+      <div class="admin-header">
+        <div class="admin-header-left">
+          <div class="badge">ADMIN PANEL</div>
+          <h2>📊 Dashboard</h2>
+          <p>Monitor and manage all camp registrations in one place.</p>
+        </div>
+        <div class="admin-header-right">
+          <span class="last-updated">
+            <i class="fas fa-sync-alt"></i> Last updated: <span id="last-updated-time">Just now</span>
+          </span>
+          <!-- ===== LOGOUT BUTTON - CHANGED TO LINK ===== -->
+          <a href="logout.html" class="btn-logout" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+      </div>
+
+      <!-- Statistics Cards -->
+      <div class="stats-grid">
+        <div class="stat-card total">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-info">
+            <span class="number" id="total-count">0</span>
+            <span class="label">Total Registrations</span>
+          </div>
+          <div class="stat-change positive">
+            <i class="fas fa-arrow-up"></i> <span id="total-change">0%</span>
+          </div>
+        </div>
+
+        <div class="stat-card age">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="stat-info">
+            <span class="number" id="avg-age">0</span>
+            <span class="label">Average Age</span>
+          </div>
+          <div class="stat-change neutral"><i class="fas fa-minus"></i> Years</div>
+        </div>
+
+        <div class="stat-card camps">
+          <div class="stat-icon"><i class="fas fa-hospital"></i></div>
+          <div class="stat-info">
+            <span class="number" id="camp-count">0</span>
+            <span class="label">Unique Camps</span>
+          </div>
+          <div class="stat-change positive"><i class="fas fa-arrow-up"></i> Active</div>
+        </div>
+
+        <div class="stat-card today">
+          <div class="stat-icon"><i class="fas fa-calendar-day"></i></div>
+          <div class="stat-info">
+            <span class="number" id="recent-count">0</span>
+            <span class="label">Registered Today</span>
+          </div>
+          <div class="stat-change neutral"><i class="fas fa-clock"></i> Today</div>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="admin-toolbar">
+        <div class="toolbar-left">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search by name or camp..." />
+            <button class="btn-clear-search" id="clear-search" title="Clear search">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <button class="btn-refresh" onclick="refreshData()" title="Refresh data">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="btn-outline" onclick="exportCSV()">
+            <i class="fas fa-file-export"></i> Export CSV
+          </button>
+          <button class="btn-warning" onclick="clearAllData()">
+            <i class="fas fa-trash-alt"></i> Clear All
+          </button>
+        </div>
+      </div>
+
+      <!-- Results Count -->
+      <div class="results-info">
+        <span id="results-count">0</span> registrations found
+        <span class="divider">|</span>
+        <span id="camp-filter-info">All camps</span>
+      </div>
+
+      <!-- Participant List -->
+      <div id="participant-list">
+        <div class="loading-state">
+          <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>🏥 Medical Camp Registration</h3>
+        <p class="footer-desc">Making healthcare accessible to everyone through free medical camps.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camps.html">Camp Details</a></li>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Upcoming Camps</h4>
+        <ul class="footer-links">
+          <li><a href="Register.html">Eye Checkup Camp</a></li>
+          <li><a href="Register.html">Diabetes Screening</a></li>
+          <li><a href="Register.html">Dental Health Camp</a></li>
+          <li><a href="camps.html">View All →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span class="contact-icon">📧</span> <a href="mailto:info@sysslan.com">info@sysslan.com</a></li>
+          <li><span class="contact-icon">📞</span> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li><span class="contact-icon">📍</span> 123 Healthcare Blvd, Medical City</li>
+          <li><span class="contact-icon">🕐</span> Mon-Fri: 9:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <strong>Sysslan IT Solutions</strong> – Internship Project. Conducted with care ❤️</p>
+      <p class="footer-legal">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="main.js"></script>
+  <script src="admin.js"></script>
+
+  <!-- ===== FUNCTIONS ===== -->
+  <script>
+    function refreshData() {
+      if (typeof renderAdminTable === 'function') {
+        renderAdminTable();
+      }
+      const now = new Date();
+      document.getElementById('last-updated-time').textContent = 
+        now.toLocaleString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          hour: '2-digit', 
+          minute: '2-digit' 
+        });
+      showToast('🔄 Data refreshed successfully.');
+    }
+
+    function exportCSV() {
+      if (typeof window.exportCSV === 'function') {
+        window.exportCSV();
+      } else {
+        showToast('⚠️ Export function not available', 'warning');
+      }
+    }
+
+    function clearAllData() {
+      if (typeof window.clearAllData === 'function') {
+        window.clearAllData();
+      } else {
+        showToast('⚠️ Clear function not available', 'warning');
+      }
+    }
+
+    function showToast(message, type) {
+      // Toast function here
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedCamp Pro - Medical Camp Registration Portal</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-left">   
+        <h1>🏥 Medical Camp Registration</h1>
+      </div>
+      
+      <!-- Hamburger Menu Button (visible on mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+    <nav id="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="camps.html" class="active">Camp Details</a></li>
+    <li><a href="Register.html">Register</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <!-- Admin button inside mobile menu -->
+  <a href="admin.html" class="admin-btn-mobile">
+    <i class="fas fa-user-shield"></i> Admin
+  </a>
+</nav>
+
+<!-- Admin Button on Desktop (Right Corner) -->
+<a href="admin.html" class="admin-btn-desktop admin-btn">
+  <i class="fas fa-user-shield"></i> Admin
+</a>
+
+     
+    </div>
+  </header>
+
+  <main id="page-container">
+
+    <!-- HERO - Full Width -->
+    <section class="hero">
+      <div class="badge">🔥 Now Accepting Registrations for 2026</div>
+      <h1>Accessible Healthcare for Everyone</h1>
+      <p>
+        Register for medical camps, connect with healthcare professionals, and improve community health.
+        Join thousands making healthcare accessible.
+      </p>
+      <div class="hero-buttons">
+        <a href="Register.html" class="btn-primary">📝 Register Now</a>
+        <a href="camps.html" class="btn-secondary">View All Camps →</a>
+      </div>
+    </section>
+
+    <!-- CONTENT WRAPPER - Centered content -->
+    <div class="content-wrapper">
+
+      <!-- STATS -->
+      <section class="stats">
+        <div class="stat-item">
+          <span class="icon">👨‍⚕️</span>
+          <span class="number" data-target="10000">10,000</span>
+          <span class="label">Patients Registered</span>
+        </div>
+        <div class="stat-item">
+          <span class="icon">🏥</span>
+          <span class="number" data-target="250">250</span>
+          <span class="label">Medical Camps Conducted</span>
+        </div>
+        <div class="stat-item">
+          <span class="icon">🩺</span>
+          <span class="number" data-target="100">100</span>
+          <span class="label">Doctors Participating</span>
+        </div>
+        <div class="stat-item">
+          <span class="icon">🌍</span>
+          <span class="number" data-target="25">25</span>
+          <span class="label">Cities Covered</span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about-section">
+        <div>
+          <h2>About Medical Camp Registration</h2>
+          <p class="subtitle">Bridging the Gap Between Communities and Healthcare</p>
+          <p>
+            MedCamp Pro exists to eliminate barriers to healthcare access. We connect underserved communities
+            with qualified medical professionals through organized medical camps, health screening drives,
+            and awareness programs.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <strong>Our mission</strong> is to ensure that quality healthcare is not a privilege but a right
+            accessible to every individual regardless of their socioeconomic background.
+          </p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #64748b;">
+            ⚠️ <em>4.5 billion people lack access to essential health services – we're changing that.</em>
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h4>🌱 15+ Years</h4>
+            <p>Serving Communities with dedication and care</p>
+          </div>
+          <div class="about-card">
+            <h4>🎯 Our Mission</h4>
+            <p>Universal healthcare access through community medical camps</p>
+          </div>
+          <div class="about-card">
+            <h4>🤝 Community Impact</h4>
+            <p>Transforming health outcomes in 25+ cities nationwide</p>
+          </div>
+          <div class="about-card">
+            <h4>👁️ Our Vision</h4>
+            <p>A world where no one is denied healthcare due to distance or cost</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="benefits-section">
+        <h2>✨ Benefits That Make a Difference</h2>
+        <p class="subtitle">We provide comprehensive healthcare services designed to make a real impact in communities.</p>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <span class="icon">🩺</span>
+            <h4>Free Health Checkups</h4>
+            <p>Comprehensive health screenings at zero cost including blood pressure, BMI, blood sugar, and general wellness assessments.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="icon">👨‍⚕️</span>
+            <h4>Expert Doctors</h4>
+            <p>Board-certified specialists across multiple disciplines providing professional consultations and medical advice.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="icon">⚡</span>
+            <h4>Quick Registration</h4>
+            <p>Register in under 2 minutes with our streamlined digital process. Instant confirmation with QR code receipt.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="icon">📁</span>
+            <h4>Digital Records</h4>
+            <p>All medical records digitized and stored securely. Access your health history anytime from your dashboard.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="icon">📢</span>
+            <h4>Health Awareness</h4>
+            <p>Regular workshops and educational programs on disease prevention, nutrition, and healthy lifestyle practices.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="icon">🚨</span>
+            <h4>Emergency Support</h4>
+            <p>24/7 emergency helpline and rapid response coordination for critical medical situations during camps.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPCOMING CAMPS PREVIEW -->
+      <section class="camp-preview">
+        <h2>📅 Next Medical Camps</h2>
+        <p class="subtitle">Register now for our upcoming free health camps in your area</p>
+        <div class="camp-preview-grid" id="home-camp-preview"></div>
+        <div class="text-center mt-1">
+          <a href="camps.html" class="view-all-link">View All Camps →</a>
+        </div>
+      </section>
+
+    </div><!-- End content-wrapper -->
+
+    <!-- READY TO JOIN - Full Width -->
+    <section class="ready-to-join">
+      <div class="text-center">
+        <h2>Ready to Join Our Next Medical Camp</h2>
+        <p>Take the first step towards better health. Register now and be part of a healthier community.</p>
+        <a href="Register.html" class="btn-primary">📝 Register Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PROFESSIONAL FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Column 1: Brand -->
+      <div class="footer-col">
+        <h3>🏥 Medical Camp Registration</h3>
+        <p class="footer-desc">
+          Making healthcare accessible to everyone through free medical camps, 
+          health screenings, and community outreach programs.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camps.html">Camp Details</a></li>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="admin.html">Admin Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Camps -->
+      <div class="footer-col">
+        <h4>Upcoming Camps</h4>
+        <ul class="footer-links">
+          <li><a href="Register.html">Eye Checkup Camp</a></li>
+          <li><a href="Register.html">Diabetes Screening</a></li>
+          <li><a href="Register.html">General Health Camp</a></li>
+          <li><a href="camps.html">View All →</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span class="contact-icon">📧</span> <a href="mailto:info@sysslan.com">info@sysslan.com</a></li>
+          <li><span class="contact-icon">📞</span> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li><span class="contact-icon">📍</span> 123 Healthcare Blvd, Medical City</li>
+          <li><span class="contact-icon">🕐</span> Mon-Fri: 9:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 <strong>Sysslan IT Solutions</strong> – Internship Project. 
+        Conducted with care ❤️
+      </p>
+      <p class="footer-legal">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="home.js"></script>
+  
+  <!-- Hamburger Menu JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navbar.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('#navbar ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
