@@ -1,20 +1,19 @@
-// ===== CONTACT FORM HANDLING =====
+// Contact form handling
 document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contact-form');
-  const formMessage = document.getElementById('form-message');
+  var contactForm = document.getElementById('contact-form');
+  var formMessage = document.getElementById('form-message');
 
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // Get form values
-      const name = document.getElementById('full-name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value.trim();
+      var name = document.getElementById('full-name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value.trim();
 
-      // ===== VALIDATION =====
+      // Validation
       if (!name || !email || !message) {
         showMessage('Please fill in all required fields.', 'error');
         return;
@@ -30,25 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // ===== SUCCESS =====
-      // In a real app, you'd send this data to a server
-      showMessage(
-        `✅ Thank you ${name}! Your message has been sent successfully. We'll get back to you within 24 hours.`,
-        'success'
-      );
-
-      // Reset form
+      showMessage('✅ Thank you ' + name + '! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
       contactForm.reset();
     });
   }
 
-  // ===== MESSAGE DISPLAY FUNCTION =====
   function showMessage(text, type) {
     formMessage.textContent = text;
     formMessage.className = type;
     formMessage.style.display = 'block';
 
-    // Auto-hide after 6 seconds
     clearTimeout(window.messageTimeout);
     window.messageTimeout = setTimeout(function() {
       formMessage.style.display = 'none';
