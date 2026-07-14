@@ -1,6 +1,4 @@
-/* ========================================
-   RESET & BASE STYLES
-   ======================================== */
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -17,11 +15,9 @@ body {
   overflow-x: hidden;
 }
 
-/* ========================================
-   HEADER
-   ======================================== */
+/* Header */
 header {
-  background: #ffffff;
+  background: #fff;
   color: #1a2a3a;
   padding: 0.8rem 2rem;
   border-bottom: 2px solid #e8f0f5;
@@ -51,9 +47,7 @@ header {
   white-space: nowrap;
 }
 
-/* ========================================
-   HAMBURGER MENU BUTTON
-   ======================================== */
+/* Hamburger menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -70,7 +64,7 @@ header {
   height: 3px;
   background: #0b3b5c;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -85,9 +79,7 @@ header {
   transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* ========================================
-   NAVIGATION
-   ======================================== */
+/* Navigation */
 nav {
   display: flex;
   align-items: center;
@@ -111,7 +103,7 @@ nav ul li a {
   padding: 0.4rem 1rem;
   border-radius: 30px;
   background: transparent;
-  transition: all 0.2s;
+  transition: 0.2s ease;
   font-weight: 500;
   display: inline-block;
   font-size: 0.95rem;
@@ -122,19 +114,17 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* ========================================
-   ADMIN BUTTON (Desktop)
-   ======================================== */
+/* Admin buttons */
 .admin-btn {
   display: inline-block;
   background: #1b6b8f;
-  color: #ffffff;
+  color: #fff;
   padding: 0.4rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -150,14 +140,11 @@ nav ul li a:hover {
   margin-right: 6px;
 }
 
-/* ========================================
-   ADMIN BUTTON (Mobile - Inside Menu)
-   ======================================== */
 .admin-btn-mobile {
   display: none;
   text-align: center;
   background: #1b6b8f;
-  color: #ffffff;
+  color: #fff;
   padding: 0.7rem 1rem;
   border-radius: 10px;
   text-decoration: none;
@@ -167,7 +154,7 @@ nav ul li a:hover {
   width: 100%;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
 }
 
 .admin-btn-mobile:hover {
@@ -179,13 +166,11 @@ nav ul li a:hover {
   margin-right: 8px;
 }
 
-/* ========================================
-   PAGE CONTAINER
-   ======================================== */
+/* Page container */
 #page-container {
   width: 100%;
   margin: 0;
-  background: #ffffff;
+  background: #fff;
   padding: 0;
   min-height: 100vh;
   display: flex;
@@ -207,9 +192,7 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-/* ========================================
-   HERO SECTION
-   ======================================== */
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #0b3b5c 0%, #1b6b8f 50%, #2a8fb0 100%);
   color: #fff;
@@ -284,7 +267,7 @@ h2 {
   border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: 0.3s ease;
   display: inline-block;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -302,7 +285,7 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   border: 2px solid rgba(255, 255, 255, 0.4);
-  transition: all 0.3s;
+  transition: 0.3s ease;
   display: inline-block;
 }
 
@@ -311,9 +294,7 @@ h2 {
   border-color: #fff;
 }
 
-/* ========================================
-   STATS SECTION
-   ======================================== */
+/* Stats */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -327,7 +308,7 @@ h2 {
   border-radius: 16px;
   text-align: center;
   border: 1px solid #e2e8f0;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.3s ease all;
 }
 
 .stat-item:hover {
@@ -355,9 +336,7 @@ h2 {
   margin-bottom: 0.3rem;
 }
 
-/* ========================================
-   ABOUT SECTION
-   ======================================== */
+/* About */
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -409,9 +388,7 @@ h2 {
   color: #64748b;
 }
 
-/* ========================================
-   BENEFITS SECTION
-   ======================================== */
+/* Benefits */
 .benefits-section {
   margin-bottom: 3rem;
 }
@@ -439,7 +416,7 @@ h2 {
   padding: 1.8rem;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
-  transition: all 0.3s;
+  transition: 0.3s ease all;
   text-align: center;
 }
 
@@ -466,9 +443,7 @@ h2 {
   line-height: 1.6;
 }
 
-/* ========================================
-   CAMP PREVIEW (Homepage)
-   ======================================== */
+/* Camp preview on homepage */
 .camp-preview {
   background: #f8fafc;
   padding: 2rem;
@@ -498,7 +473,7 @@ h2 {
   padding: 1.5rem;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
-  transition: all 0.3s;
+  transition: 0.3s ease all;
 }
 
 .camp-preview-card:hover {
@@ -560,11 +535,9 @@ h2 {
   color: #0b3b5c;
 }
 
-/* ========================================
-   READY TO JOIN SECTION
-   ======================================== */
+/* Ready to join */
 .ready-to-join {
-  background: linear-gradient(135deg, #e1dae71b 0%, #dde6e33d 50%, #a4adb02f 100%);
+  background: linear-gradient(135deg, rgba(225, 218, 231, 0.11) 0%, rgba(221, 230, 227, 0.24) 50%, rgba(164, 173, 176, 0.18) 100%);
   color: #100f0f;
   padding: 4rem 2rem;
   border-radius: 0;
@@ -598,13 +571,13 @@ h2 {
 .ready-to-join .btn-primary {
   display: inline-block;
   background: #1b6b8f;
-  color: #ffffff;
+  color: #fff;
   padding: 0.8rem 2.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -613,9 +586,7 @@ h2 {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
+/* Footer */
 .main-footer {
   background: linear-gradient(135deg, #0b2a3a 0%, #1a4a6a 50%, #0b3b5c 100%);
   color: #e8f0f5;
@@ -639,7 +610,7 @@ h2 {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: -0.5px;
 }
 
@@ -647,7 +618,7 @@ h2 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #fff;
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -686,7 +657,7 @@ h2 {
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
   color: #e8f0f5;
 }
 
@@ -709,13 +680,13 @@ h2 {
 .footer-links a {
   color: #b0c8d8;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: 0.2s ease all;
   font-size: 0.95rem;
   display: inline-block;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: #fff;
   transform: translateX(5px);
 }
 
@@ -747,12 +718,12 @@ h2 {
 .footer-contact a {
   color: #b0c8d8;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: 0.2s ease;
   word-break: break-word;
 }
 
 .footer-contact a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-bottom {
@@ -773,7 +744,7 @@ h2 {
 }
 
 .footer-bottom strong {
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-legal {
@@ -786,16 +757,14 @@ h2 {
   color: #8aaec4;
   text-decoration: none;
   font-size: 0.85rem;
-  transition: color 0.2s;
+  transition: 0.2s ease;
 }
 
 .footer-legal a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
-/* ========================================
-   CAMP CARD STYLES (General)
-   ======================================== */
+/* General camp cards */
 .camp-card {
   background: #f8fafc;
   border-left: 6px solid #1b6b8f;
@@ -815,9 +784,7 @@ h2 {
   color: #334155;
 }
 
-/* ========================================
-   FORM STYLES
-   ======================================== */
+/* Forms */
 form {
   max-width: 500px;
   display: flex;
@@ -838,7 +805,7 @@ select {
   border-radius: 10px;
   font-size: 1rem;
   background: #fff;
-  transition: border 0.2s;
+  transition: border 0.2s ease;
 }
 
 input:focus,
@@ -857,7 +824,7 @@ button {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
 }
 
 button:hover {
@@ -918,9 +885,7 @@ button:hover {
   padding: 1rem 0;
 }
 
-/* ========================================
-   CAMPS PAGE SPECIFIC STYLES
-   ======================================== */
+/* Camps page */
 .camps-header {
   text-align: center;
   padding: 2rem 0 1rem;
@@ -963,11 +928,11 @@ button:hover {
 }
 
 .camp-card-modern {
-  background: #ffffff;
+  background: #fff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
   border: 1px solid #e8f0f5;
 }
 
@@ -1023,30 +988,30 @@ button:hover {
   opacity: 0.95;
 }
 
-/* ----- Color Variants ----- */
+/* Camp color variants */
 .camp-card-modern.dermatology .card-header {
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
 }
 .camp-card-modern.general .card-header {
-  background: linear-gradient(135deg, #0b3b5c 0%, #1b6b8f 100%);
+  background: linear-gradient(135deg, #0b3b5c, #1b6b8f);
 }
 .camp-card-modern.cardiac .card-header {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 .camp-card-modern.diabetes .card-header {
-  background: linear-gradient(135deg, #1a4a6a 0%, #2a8fb0 100%);
+  background: linear-gradient(135deg, #1a4a6a, #2a8fb0);
 }
 .camp-card-modern.eye-care .card-header {
-  background: linear-gradient(135deg, #0f5c7a 0%, #3a9fc7 100%);
+  background: linear-gradient(135deg, #0f5c7a, #3a9fc7);
 }
 .camp-card-modern.dental .card-header {
-  background: linear-gradient(135deg, #065f46 0%, #0d9488 100%);
+  background: linear-gradient(135deg, #065f46, #0d9488);
 }
 .camp-card-modern.womens-health .card-header {
-  background: linear-gradient(135deg, #be185d 0%, #db2777 100%);
+  background: linear-gradient(135deg, #be185d, #db2777);
 }
 .camp-card-modern.child-health .card-header {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
 .camp-card-modern .card-body {
@@ -1148,7 +1113,7 @@ button:hover {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
   border: 2px solid #1b6b8f;
   cursor: pointer;
   width: 100%;
@@ -1181,11 +1146,7 @@ button:hover {
   box-shadow: none;
 }
 
-/* ========================================
-   RESPONSIVE STYLES
-   ======================================== */
-
-/* ----- Tablet & Small Laptop (max-width: 992px) ----- */
+/* Responsive - Tablet */
 @media (max-width: 992px) {
   .header-container {
     flex-wrap: wrap;
@@ -1197,12 +1158,10 @@ button:hover {
     order: 2;
   }
 
-  /* Hide desktop admin button on tablet/mobile */
   .admin-btn {
     display: none !important;
   }
 
-  /* Show mobile admin button inside nav */
   .admin-btn-mobile {
     display: block !important;
   }
@@ -1212,7 +1171,7 @@ button:hover {
     width: 100%;
     order: 3;
     flex-basis: 100%;
-    background: #ffffff;
+    background: #fff;
     padding: 1rem 0;
     border-top: 1px solid #e8f0f5;
     margin-top: 0.5rem;
@@ -1295,7 +1254,7 @@ button:hover {
   }
 }
 
-/* ----- Mobile (max-width: 768px) ----- */
+/* Responsive - Mobile */
 @media (max-width: 768px) {
   header {
     padding: 0.5rem 1rem;
@@ -1409,7 +1368,7 @@ button:hover {
   }
 }
 
-/* ----- Small Mobile (max-width: 480px) ----- */
+/* Responsive - Small mobile */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.6rem !important;
@@ -1502,4 +1461,3 @@ button:hover {
     padding: 0.5rem 1.2rem;
   }
 }
-
